@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=Besley:ital,wght@0,400;1,900&display=swap');
+
+body {
+    margin: 0;
+    background: #eee;
+    font-family: Besley, serif;
+
+}
+
+
+.sidenav {
+
+    width: 150px;
+    /* Set the width of the sidebar */
+    background-color: #154c79;
+    float: left;
+    height: calc(100vh - 80px);
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+
+
+
+
+}
+
+.sidenav-content {
+
+    display: grid;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    gap: 40px;
+    padding: 20px;
+    font-size: 20px;
+    border-radius: 12px;
+}
+
+.sidenav-links {
+    color: aliceblue;
+
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+
+}
+
+
+.header {
+    height: 80px;
+    background-color: #063970;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+
+    display: grid;
+    grid-template-rows: 1fr;
+    /*1fr means one fraction of the available space, it lets me create flexible layouts for resizing */
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+
+    gap: clamp(10px, 3vw, 30px);
+    /* Responsive gap */
+}
+
+
+
+.search-bar {
+    display: flex;
+    max-width: 500px;
+    min-width: 90%;
+    /*good habbit if i want the container to be responsive*/
+    /*make sure icon is center horizontally*/
+    align-items: center;
+    padding: 14px;
+    border-radius: 28px;
+    background: lightgray;
+
+}
+
+.search-input {
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #333333;
+    margin-left: 13px;
+    background: transparent;
+    outline: none;
+    border: none;
+    flex: 1;
+    /*adding flex allowed me to click on the entire search bar*/
+    min-width: 0;
+    /* Prevents input from overflowing */
+}
+
+.button {
+    background-color: orangered;
+    /* Green */
+    border: none;
+
+    color: white;
+    padding: 13px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    border-radius: 12px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+}
+
+
+.buttons {
+    display: flex;
+    /* makes the list items horizontal */
+
+
+    gap: clamp(8px, 2vw, 16px);
+    /* Responsive gap */
+    /* space between links */
+    list-style: none;
+    /* removes bullets */
+    flex-shrink: 0;
+    /* Prevents buttons from shrinking too much */
+
+
+}
+
+
+
+
+.pfp-image {
+    border-radius: 50%;
+    width: 80px;
+    width: clamp(40px, 8vw, 80px);
+    /* Responsive size */
+    height: clamp(40px, 8vw, 80px);
+    /* Maintain aspect ratio */
+    flex-shrink: 0;
+    /* Prevents image from shrinking */
+}

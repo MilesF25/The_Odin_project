@@ -1,0 +1,15 @@
+a bit late but here is the latest issue and how i solved it
+
+
+1.Issue with search bar. I found that some places on the bar were not responsive, id click but 
+i would'nt be able to type. I had to add flex: 1; to the css for the bar to enable the whole bar. still a bit weird
+
+2. Huge issue, header looked horrible when minimized. claude says it because of the fixed grid columns
+2fr auto auto does not resize well, gap 30px is too big. setting the bar to be 800px is way to big (duh)
+
+Fixes: Changed to 1fr auto auto, so the search bar is smaller. Used clamp function so the gaps scale with the viewport
+added flex shrink to buttons to get them to not shrink so much (will see how it looks). Adde clamp to width and height to pfp image so its responsive
+
+
+3. So my issue is that the sidebarr is on top of the header. I know its becuase its fixed but im trying to get it to go underneath the header.
+To fix this i added a height to the header. then i used a calc function to measure the height so its directly underneath the header (height: calc(100vh - 80px);)
