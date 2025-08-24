@@ -138,3 +138,17 @@ body {
     flex-shrink: 0;
     /* Prevents image from shrinking */
 }
+
+
+.photo-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.photos {
+    padding: 5px;
+    background-color: lightblue;
+
+}
